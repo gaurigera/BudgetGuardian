@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/cardview_default_elevation"
+    app:cardBackgroundColor="@color/preview_card_bg_color"
+    android:paddingVertical="@dimen/cardview_compat_inset_shadow"
+    app:strokeColor="@color/preview_card_bg_color"
+    >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/cardview_compat_inset_shadow"
+            >
+
+            <TextView
+                android:id="@+id/category_name"
+                style="@style/headingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category" />
+
+            <TextView
+                android:id="@+id/spent"
+                style="@style/costTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$12,325,200" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/cardview_default_elevation"
+                android:text="SEE ALL"
+                android:backgroundTint="@color/preview_card_bg_color"
+                />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

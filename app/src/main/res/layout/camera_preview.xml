@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/preview_card_bg_color"
+    tools:context=".ui.components.camera.CameraActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/preview_card_bg_color"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/preview_card_bg_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
+        >
+        <ImageButton
+            android:id="@+id/retake_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/baseline_arrow_back_24"
+            android:layout_gravity="center"
+            android:contentDescription="Retake Image"
+            android:visibility="gone"
+            />
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="1dp"/>
+        <ImageButton
+            android:id="@+id/click_button"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/baseline_camera_24"
+            android:layout_gravity="center"
+            android:contentDescription="Click Button" />
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="1dp"/>
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/baseline_check_24"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

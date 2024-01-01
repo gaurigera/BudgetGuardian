@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="headingTextStyle" parent="TextAppearance.AppCompat.Headline">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="costTextStyle" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">35dp</item>
+    </style>
+
+    <style name="seeAllButtonStyle" parent="ShapeAppearanceOverlay.Material3.Button">
+        <item name="android:background">@color/preview_card_bg_color</item>
+    </style>
+
+    <style name="circularButton">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="calendarViewStyle">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="weekDayTextStyle">
+        <item name="android:textColor">@color/red</item>
+    </style>
+</resources>

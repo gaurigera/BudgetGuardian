@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_bg_color"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:id="@+id/date_day"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/date_day_month"
+            style="@style/headingTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mon, 1 Jan" />
+
+        <Button
+            android:id="@+id/date_day_month_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/amount_selection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/date_day">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/baseline_currency_rupee_24" />
+
+        <EditText
+            android:id="@+id/amount_text"
+            style="@style/headingTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:digits="0123456789"
+            android:hint="Add amount"
+            android:inputType="number"
+            android:textColorHint="@color/white" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/content_description"
+        style="@style/headingTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Spend description"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/category_spinner"
+        app:layout_constraintTop_toBottomOf="@id/amount_selection" />
+
+    <Spinner
+        android:id="@+id/category_spinner"
+        style="@style/headingTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toBottomOf="@id/content_description" />
+
+    <ImageButton
+        android:id="@+id/submit_button"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@color/secondary_bg_color"
+        android:contentDescription="submit"
+        android:src="@drawable/baseline_check_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
