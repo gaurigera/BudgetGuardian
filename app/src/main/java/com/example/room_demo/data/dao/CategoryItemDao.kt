@@ -15,7 +15,7 @@ interface CategoryItemDao {
     @Delete
     suspend fun deleteItem(categoryItem: CategoryItems)
 
-    @Query("select * from category_items where categoryId = :categoryId")
+    @Query("select * from category_items where category_id = :categoryId")
     suspend fun getItemsByCategory(categoryId: Int): List<CategoryItems>
 
     @Query("select * from category_items where id = :movieId")

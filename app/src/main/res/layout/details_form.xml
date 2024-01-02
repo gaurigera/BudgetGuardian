@@ -47,9 +47,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:digits="0123456789"
             android:hint="Add amount"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:textColorHint="@color/white" />
     </LinearLayout>
 

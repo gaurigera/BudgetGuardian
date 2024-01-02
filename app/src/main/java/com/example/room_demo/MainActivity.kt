@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.room_demo.databinding.ActivityMainBinding
 import com.example.room_demo.ui.components.bottomSheets.BottomSheet
-import com.example.room_demo.ui.components.FormActivity
+import com.example.room_demo.ui.components.detail_form.FormActivity
 import com.example.room_demo.ui.components.camera.CameraActivity
 import com.example.room_demo.ui.recyclerViewUtil.CategoryAdapter
 

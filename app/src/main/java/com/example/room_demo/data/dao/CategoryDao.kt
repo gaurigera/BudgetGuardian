@@ -15,6 +15,9 @@ interface CategoryDao {
     @Query("select * from categories")
     fun readAllData(): Flow<List<Category>>
 
+    @Query("select name from categories")
+    fun readCategoryNames() : Flow<List<String>>
+
     @Query("select sum(spent) from category_items where id = :id")
     fun sumOfSpent(id: Int): Double
 
