@@ -74,7 +74,6 @@ class FormActivity : AppCompatActivity(), BottomSheetListener {
                 ) {
                     viewModel.selectedSpinnerPosition = position
                 }
-
                 override fun onNothingSelected(parent: AdapterView<*>?) {
                     viewModel.selectedSpinnerPosition = 0
                 }

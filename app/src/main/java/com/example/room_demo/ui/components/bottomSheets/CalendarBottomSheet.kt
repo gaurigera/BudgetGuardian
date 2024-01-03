@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.example.room_demo.databinding.DatePickerBottomSheetBinding
 import com.example.room_demo.ui.components.detail_form.BottomSheetListener
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import java.util.Calendar
 import java.util.Date
 
 class CalendarBottomSheet : BottomSheetDialogFragment() {
@@ -35,6 +36,11 @@ class CalendarBottomSheet : BottomSheetDialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.calenderView.setOnDateChangeListener { calView, year, month, dayOfMonth ->
+            val selectedDate = Calendar.getInstance()
+            selectedDate.set(year, month, dayOfMonth)
+            calView.date = selectedDate.time.time
+        }
         binding.saveButton.setOnClickListener {
             println(Date(binding.calenderView.date))
             listener.onDataReceived(binding.calenderView.date)
