@@ -3,6 +3,7 @@
     <style name="Base.Theme.ROOM_demo" parent="Theme.Material3.DayNight.NoActionBar">
          <item name="colorPrimary">@color/primary_bg_color</item>
         <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
     </style>
     <style name="Theme.ROOM_demo" parent="Base.Theme.ROOM_demo" />
 </resources>

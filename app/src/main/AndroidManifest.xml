@@ -24,7 +24,7 @@
         android:theme="@style/Theme.ROOM_demo"
         tools:targetApi="33">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.components.main_activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

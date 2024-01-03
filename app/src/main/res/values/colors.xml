@@ -5,7 +5,7 @@
     <color name="primary_bg_color">#27262e</color>
     <color name="preview_card_bg_color">#2A2930</color>
     <color name="secondary_bg_color">#2D2D32</color>
-    <color name="purple">#D87CEF</color>
+    <color name="dialog_bg_color">#19101B</color>
     <color name="orange_red">#ff797b</color>
     <color name="green">#44A657</color>
     <color name="red">#8A3033</color>

@@ -1,4 +1,4 @@
-package com.example.room_demo.ui.recyclerViewUtil
+package com.example.room_demo.ui.components.main_activity.recyclerViewUtil
 
 import androidx.recyclerview.widget.DiffUtil
 import com.example.room_demo.data.data_classes.Category

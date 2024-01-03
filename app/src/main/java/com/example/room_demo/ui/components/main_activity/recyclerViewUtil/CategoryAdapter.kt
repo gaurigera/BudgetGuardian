@@ -1,4 +1,4 @@
-package com.example.room_demo.ui.recyclerViewUtil
+package com.example.room_demo.ui.components.main_activity.recyclerViewUtil
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

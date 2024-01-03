@@ -31,9 +31,10 @@ class FormActivity : AppCompatActivity(), BottomSheetListener {
         super.onCreate(savedInstanceState)
         binding = DetailsFormBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val categoryRepo = (application as BudgetGuardianApplication).getCategoryRepo()
+        val categoryItemRepo = (application as BudgetGuardianApplication).getCategoryItemRepo()
         val formViewModelFactory = FormViewModelFactory(
-            (application as BudgetGuardianApplication).categoryItemRepository,
-            (application as BudgetGuardianApplication).categoryRepository
+            categoryItemRepo, categoryRepo
         )
         viewModel = ViewModelProvider(this, formViewModelFactory)[FormViewModel::class.java]
         viewModel.date.observe(this) { data ->
@@ -74,6 +75,7 @@ class FormActivity : AppCompatActivity(), BottomSheetListener {
                 ) {
                     viewModel.selectedSpinnerPosition = position
                 }
+
                 override fun onNothingSelected(parent: AdapterView<*>?) {
                     viewModel.selectedSpinnerPosition = 0
                 }

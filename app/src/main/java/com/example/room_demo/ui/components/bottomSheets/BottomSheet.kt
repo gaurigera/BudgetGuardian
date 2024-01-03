@@ -13,8 +13,8 @@ import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.example.room_demo.MainActivity
 import com.example.room_demo.R
+import com.example.room_demo.ui.components.main_activity.MainActivity
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class BottomSheet : BottomSheetDialogFragment() {
@@ -32,12 +32,12 @@ class BottomSheet : BottomSheetDialogFragment() {
         return inflater.inflate(R.layout.bottom_sheet_dialog, container, false)
     }
 
-    private val activityResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-        result : ActivityResult ->
-        if (result.resultCode == Activity.RESULT_OK) {
-            val intent = result.data
+    private val activityResult =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                val intent = result.data
+            }
         }
-    }
 
     private fun openRecentImages() {
         val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)

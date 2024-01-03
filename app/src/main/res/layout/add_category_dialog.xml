@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="220dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/dialog_bg_color"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <EditText
+        android:id="@+id/add_category_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:autofillHints="name"
+        android:hint="Category Name"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        />
+
+    <EditText
+        android:id="@+id/add_spend_limit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:hint="Spend Limit"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        />
+
+    <Button
+        android:id="@+id/save_category_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/dialog_bg_color"
+        android:text="@string/save" />
+</LinearLayout>

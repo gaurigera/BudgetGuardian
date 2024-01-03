@@ -9,4 +9,10 @@ class BudgetGuardianApplication : Application() {
     val categoryDatabase by lazy { CategoryDatabase.getDatabase(this) }
     val categoryRepository by lazy { CategoryRepository(categoryDatabase.categoryDao()) }
     val categoryItemRepository by lazy { CategoryItemRepository(categoryDatabase.categoryItemDao()) }
+    fun getCategoryRepo(): CategoryRepository {
+        return categoryRepository
+    }
+    fun getCategoryItemRepo(): CategoryItemRepository {
+        return categoryItemRepository
+    }
 }
